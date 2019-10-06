@@ -20,7 +20,7 @@ pipeline {
             }
             post {
                 success {
-                    junit 'target/maven-archiver/*.xml' 
+                     echo 'This is a minimal pipeline.' 
                 }
             }
         }
