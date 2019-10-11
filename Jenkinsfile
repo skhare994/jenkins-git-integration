@@ -13,5 +13,22 @@ pipeline {
                 ''' 
             }
         }
+
+        stage ('Build') {
+            steps {
+                bat 'mvn -Dmaven.test.failure.ignore=true install' 
+            }
+            post {
+                success {
+                     echo 'This is a minimal pipeline.' 
+                }
+            }
+        }
+        
+        stage ('Test') {
+            steps {
+                bat 'mvn install' 
+            }
+        }
     }
 }
