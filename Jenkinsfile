@@ -20,7 +20,7 @@ pipeline {
             }
             post {
                 success {
-                     echo 'This is a minimal pipeline.' 
+                     echo 'This is a minimal pipeline...' 
                 }
             }
         }
