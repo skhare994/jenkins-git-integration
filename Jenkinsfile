@@ -5,6 +5,12 @@ pipeline {
         jdk 'jdk1.8.0_221' 
     }
     stages {
+        
+        stage('checkout') {
+        git 'https://github.com/skhare994/jenkins-git-integration.git'
+            
+        }
+        
         stage ('Initialize') {
             steps {
                 bat '''
