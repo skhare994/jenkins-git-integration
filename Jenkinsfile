@@ -6,9 +6,10 @@ pipeline {
     }
     stages {
         
-        stage('checkout') {
-        git 'https://github.com/skhare994/jenkins-git-integration.git'
-            
+        stage ('Checkout') {
+             steps {
+                git 'https://github.com/skhare994/jenkins-git-integration.git'
+             }            
         }
         
         stage ('Initialize') {
